@@ -1,24 +1,61 @@
-import logo from './logo.svg';
+import React, { Suspense, lazy } from 'react';
 import './App.css';
+import './vendor.css';
+import './styles/variables.css';
+import './styles.css';
+import SEO from './components/SEO';
+import Preloader from './components/Preloader';
+import Header from './components/Header';
+import Intro from './components/Intro';
+
+// Lazy loading of components not "above the fold"
+const About = lazy(() => import('./components/About'));
+const Menu = lazy(() => import('./components/Menu'));
+const Gallery = lazy(() => import('./components/Gallery'));
+const Footer = lazy(() => import('./components/Footer'));
+
+// Loading component while lazy components load
+const LoadingFallback = () => (
+  <div
+    style={{
+      padding: '3rem',
+      textAlign: 'center',
+      minHeight: '200px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+  >
+    <div
+      style={{
+        width: '40px',
+        height: '40px',
+        border: '3px solid #dbb17c',
+        borderTop: '3px solid transparent',
+        borderRadius: '50%',
+        animation: 'spin 1s linear infinite',
+      }}
+    ></div>
+  </div>
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SEO />
+      <div id="page" className="s-pagewrap ss-home">
+        <Preloader />
+        <Header />
+        <Intro />
+
+        <Suspense fallback={<LoadingFallback />}>
+          <About />
+          <Menu />
+          <Gallery />
+          <Footer />
+        </Suspense>
+      </div>
+    </>
   );
 }
 

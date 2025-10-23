@@ -1,0 +1,30 @@
+# Dependencias
+node_modules/
+
+# Build
+build/
+dist/
+
+# Coverage
+coverage/
+
+# Logs
+*.log
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Plantilla y archivos generados
+plantilla/
+*.min.js
+*.min.css
+

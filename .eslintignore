@@ -1,0 +1,24 @@
+# Dependencias
+node_modules/
+
+# Build
+build/
+dist/
+
+# Coverage
+coverage/
+
+# Plantilla
+plantilla/
+
+# Utilidades de terceros (plugins jQuery, etc)
+src/utils/main.js
+src/utils/plugins.js
+
+# Archivos generados
+*.min.js
+*.min.css
+
+# Configuración
+*.config.js
+

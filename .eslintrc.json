@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "plugin:jsx-a11y/recommended",
+    "prettier"
+  ],
+  "plugins": ["jsx-a11y"],
+  "rules": {
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "jsx-a11y/anchor-is-valid": ["warn", {
+      "aspects": ["invalidHref"]
+    }],
+    "jsx-a11y/img-redundant-alt": "warn",
+    "jsx-a11y/alt-text": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/__tests__/**/*", "**/*.test.js", "**/*.test.jsx"],
+      "rules": {
+        "testing-library/no-container": "off",
+        "testing-library/no-node-access": "off"
+      }
+    }
+  ]
+}
+

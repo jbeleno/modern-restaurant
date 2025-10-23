@@ -1,70 +1,250 @@
-# Getting Started with Create React App
+# 🍽️ Burdo Neiva - Restaurant Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Modern web application for Burdo Neiva restaurant, built with React and optimized for performance and accessibility.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- ✅ **Modern SPA** - React 19 with Create React App
+- ✅ **Responsive Design** - Adapted for mobile, tablet and desktop
+- ✅ **Performance Optimization** - Lazy loading, memoization, debounce
+- ✅ **Accessibility (A11y)** - Complete ARIA, keyboard navigation
+- ✅ **SEO Optimized** - Meta tags and JSON-LD schema
+- ✅ **Testing** - 37 automated tests with Jest and React Testing Library
+- ✅ **Code Quality** - ESLint + Prettier + Git Hooks
+- ✅ **Modular Architecture** - Reusable components and centralized data
 
-### `npm start`
+## 📦 Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 19.2.0** - UI Library
+- **GSAP 3.13.0** - Animations
+- **Motion 12.23** - Modern animations
+- **Jest** - Testing framework
+- **React Testing Library** - Component testing
+- **ESLint + Prettier** - Linting and formatting
+- **Husky + lint-staged** - Git hooks
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Installation
 
-### `npm test`
+```bash
+# Clone the repository
+git clone https://github.com/jbeleno/modern-restaurant.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Install dependencies
+npm install
 
-### `npm run build`
+# Start development server
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📜 Available Scripts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Development
+```bash
+npm start              # Development server at http://localhost:3000
+npm run build          # Optimized production build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Testing
+```bash
+npm test               # Tests in watch mode
+npm run test:coverage  # Tests with coverage report
+```
 
-### `npm run eject`
+### Code Quality
+```bash
+npm run lint           # Check errors with ESLint
+npm run lint:fix       # Fix errors automatically
+npm run format         # Format code with Prettier
+npm run format:check   # Check format without changes
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+burdo/
+├── public/                  # Static files
+│   └── assets/
+│       └── images/          # Site images
+├── src/
+│   ├── components/          # React components
+│   │   ├── __tests__/       # Component tests
+│   │   ├── About.js
+│   │   ├── Footer.js
+│   │   ├── Gallery.js
+│   │   ├── Header.js
+│   │   ├── Intro.js
+│   │   ├── Menu.js
+│   │   ├── MenuItem.js
+│   │   ├── Modal.js
+│   │   ├── Preloader.js
+│   │   └── SEO.js
+│   ├── data/                # Centralized data
+│   │   ├── galleryData.js   # Gallery data
+│   │   ├── menuData.js      # Restaurant menu
+│   │   ├── navigationData.js # Navigation links
+│   │   └── siteConfig.js    # Site configuration
+│   ├── hooks/               # Custom React Hooks
+│   │   ├── useActiveSection.js
+│   │   ├── useGalleryChromaEffect.js
+│   │   ├── useLightbox.js
+│   │   ├── useMenuToggle.js
+│   │   ├── usePreloader.js
+│   │   ├── useScrollAnimation.js
+│   │   ├── useSmoothScroll.js
+│   │   └── useStickyHeader.js
+│   ├── styles/              # CSS styles
+│   │   └── variables.css    # CSS variables (design system)
+│   ├── utils/               # Utilities and helpers
+│   │   ├── __tests__/       # Utility tests
+│   │   ├── constants.js     # Project constants
+│   │   ├── formatters.js    # Format functions
+│   │   ├── helpers.js       # Helper functions
+│   │   ├── main.js          # jQuery scripts (third-party)
+│   │   └── plugins.js       # jQuery plugins (third-party)
+│   ├── App.js               # Main component
+│   ├── App.css              # App styles
+│   ├── index.js             # Entry point
+│   ├── styles.css           # Global styles
+│   └── vendor.css           # Third-party styles
+├── .eslintrc.json           # ESLint configuration
+├── .prettierrc              # Prettier configuration
+├── jest.config.js           # Jest configuration
+└── package.json             # Dependencies and scripts
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎨 Key Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Performance
+- **Lazy Loading** of components (About, Menu, Gallery, Footer)
+- **Memoization** with React.memo in MenuItem
+- **Debounce** in scroll events
+- **Lazy loading** of images with loading="lazy" attribute
+- **Priority hints** in hero images
 
-## Learn More
+### Accessibility
+- **Complete ARIA attributes** in modal
+- **Focus trap** in open modal
+- **Keyboard navigation** (Escape, Tab, Enter)
+- **Alt text** in all images
+- **Appropriate semantic roles**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### SEO
+- **Meta tags** Open Graph and Twitter Cards
+- **JSON-LD Schema** for restaurants
+- **Canonical URLs**
+- **Optimized titles and descriptions**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Testing
+- **37 automated tests** covering:
+  - Main components (Header, Menu, Modal, MenuItem)
+  - Utilities (formatters)
+  - User interactions
+  - Accessibility
 
-### Code Splitting
+### Code Quality
+- **ESLint** with React and accessibility rules
+- **Prettier** for consistent formatting
+- **Git hooks** (pre-commit) that validate automatically
+- **0 linting errors** across the entire project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔧 Configuration
 
-### Analyzing the Bundle Size
+### Environment Variables
+You can configure environment variables in a `.env` file:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```env
+REACT_APP_SITE_NAME="Burdo Neiva"
+REACT_APP_API_URL="https://api.example.com"
+```
 
-### Making a Progressive Web App
+### Site Configuration
+Edit `src/data/siteConfig.js` to change:
+- Restaurant name
+- Address
+- Phone
+- Social networks
+- Schedule
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Menu
+Update `src/data/menuData.js` to modify:
+- Menu categories
+- Dishes and prices
+- Descriptions
+- Ingredients
 
-### Advanced Configuration
+## 📝 Git Hooks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The project has **Husky** configured with **lint-staged** to automatically validate code before each commit:
 
-### Deployment
+```bash
+git commit
+# Automatically runs:
+# 1. ESLint --fix (fixes errors)
+# 2. Prettier --write (formats code)
+# 3. If there are errors → commit blocked ❌
+# 4. If everything OK → successful commit ✅
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🧪 Testing
 
-### `npm run build` fails to minify
+The project includes comprehensive tests:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+# Run all tests
+npm test
+
+# Tests with coverage
+npm run test:coverage
+
+# Current coverage:
+- Components: 4 tested files
+- Utilities: 1 tested file
+- Total: 37 tests passing ✅
+```
+
+## 🚀 Deployment
+
+### Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/jbeleno/modern-restaurant)
+
+Or manually:
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Build for Production
+
+```bash
+npm run build
+# Creates optimized build in /build folder
+```
+
+## 🎯 Future Improvements
+
+- [ ] Implement backend with REST API
+- [ ] Online reservation system
+- [ ] Payment gateway integration
+- [ ] Admin panel
+- [ ] Online ordering system
+- [ ] Google Analytics integration
+
+## 📄 License
+
+This project is private and belongs to Burdo Neiva.
+
+## 👥 Team
+
+Developed with ❤️ for Burdo Neiva
+
+---
+
+**Project Status**: ✅ Production Ready  
+**Version**: 0.1.0  
+**Tests**: 37/37 passing ✅  
+**Linting**: 0 errors ✅

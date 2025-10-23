@@ -1,0 +1,174 @@
+/* ============================================
+   Variables CSS - Burdo Neiva
+   ============================================ */
+
+:root {
+  /* === Colores === */
+  /* Colores primarios */
+  --color-primary: #2c3e50;
+  --color-primary-light: #3e5770;
+  --color-primary-dark: #1a252f;
+
+  /* Colores secundarios */
+  --color-secondary: #e74c3c;
+  --color-secondary-light: #ec7063;
+  --color-secondary-dark: #c0392b;
+
+  /* Colores de acento */
+  --color-accent: #f39c12;
+  --color-accent-light: #f5b041;
+  --color-accent-dark: #d68910;
+
+  /* Colores de texto */
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-text-lighter: #999999;
+  --color-text-white: #ffffff;
+
+  /* Colores de fondo */
+  --color-bg: #ffffff;
+  --color-bg-light: #f8f9fa;
+  --color-bg-dark: #1a1a1a;
+  --color-bg-darker: #0d0d0d;
+
+  /* Colores de estado */
+  --color-success: #27ae60;
+  --color-error: #e74c3c;
+  --color-warning: #f39c12;
+  --color-info: #3498db;
+
+  /* Colores de bordes */
+  --color-border: #dee2e6;
+  --color-border-light: #e9ecef;
+  --color-border-dark: #adb5bd;
+
+  /* === Tipografía === */
+  /* Familias de fuentes */
+  --font-primary:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-mono: 'Courier New', Courier, monospace;
+
+  /* Tamaños de fuente */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 2rem; /* 32px */
+  --font-size-4xl: 2.5rem; /* 40px */
+  --font-size-5xl: 3rem; /* 48px */
+  --font-size-6xl: 4rem; /* 64px */
+
+  /* Pesos de fuente */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Line heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* === Espaciado === */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+  --spacing-3xl: 4rem; /* 64px */
+  --spacing-4xl: 6rem; /* 96px */
+  --spacing-5xl: 8rem; /* 128px */
+
+  /* === Sombras === */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+  /* === Bordes === */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 1rem; /* 16px */
+  --radius-xl: 1.5rem; /* 24px */
+  --radius-2xl: 2rem; /* 32px */
+  --radius-full: 9999px;
+
+  /* === Transiciones === */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+  --transition-slower: 800ms ease-in-out;
+
+  /* === Z-index === */
+  --z-base: 1;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-notification: 1080;
+
+  /* === Anchos máximos === */
+  --max-width-xs: 20rem; /* 320px */
+  --max-width-sm: 24rem; /* 384px */
+  --max-width-md: 28rem; /* 448px */
+  --max-width-lg: 32rem; /* 512px */
+  --max-width-xl: 36rem; /* 576px */
+  --max-width-2xl: 42rem; /* 672px */
+  --max-width-3xl: 48rem; /* 768px */
+  --max-width-4xl: 56rem; /* 896px */
+  --max-width-5xl: 64rem; /* 1024px */
+  --max-width-6xl: 72rem; /* 1152px */
+  --max-width-7xl: 80rem; /* 1280px */
+  --max-width-full: 100%;
+
+  /* === Breakpoints (solo para referencia en media queries) === */
+  /* Mobile: 480px */
+  /* Tablet: 768px */
+  /* Desktop: 1024px */
+  /* Wide: 1440px */
+  /* Ultra Wide: 1920px */
+}
+
+/* === Variables Específicas del Proyecto === */
+:root {
+  /* Header */
+  --header-height: 80px;
+  --header-height-sticky: 60px;
+
+  /* Sidebar */
+  --sidebar-width: 280px;
+
+  /* Container */
+  --container-max-width: 1440px;
+  --container-padding: var(--spacing-md);
+
+  /* Grid */
+  --grid-gutter: var(--spacing-lg);
+
+  /* Cards */
+  --card-padding: var(--spacing-lg);
+  --card-radius: var(--radius-lg);
+
+  /* Buttons */
+  --btn-padding-x: var(--spacing-lg);
+  --btn-padding-y: var(--spacing-sm);
+  --btn-radius: var(--radius-md);
+}
