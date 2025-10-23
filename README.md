@@ -2,6 +2,8 @@
 
 Modern web application for Burdo Neiva restaurant, built with React and optimized for performance and accessibility.
 
+https://modern-restaurant-xi.vercel.app/
+
 ## 🚀 Features
 
 - ✅ **Modern SPA** - React 19 with Create React App
