@@ -112,17 +112,6 @@ const Modal = ({ isOpen, onClose, item }) => {
             <h3>Descripción</h3>
             <p>{item.description}</p>
           </div>
-
-          {item.ingredients && item.ingredients.length > 0 && (
-            <div className="modal-ingredients">
-              <h3>Ingredientes</h3>
-              <ul>
-                {item.ingredients.map((ingredient, index) => (
-                  <li key={index}>{ingredient}</li>
-                ))}
-              </ul>
-            </div>
-          )}
         </div>
       </div>
     </div>

@@ -97,46 +97,6 @@
   user-select: none;
 }
 
-/* Lista de ingredientes */
-.modal-ingredients {
-  margin-top: var(--vspace-1_5);
-  padding: var(--vspace-1_5);
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  border: 1px solid rgba(219, 177, 124, 0.3);
-}
-
-.modal-ingredients h3 {
-  font-size: var(--text-lg);
-  color: #dbb17c;
-  margin-bottom: var(--vspace-1);
-  font-weight: var(--font-weight-semibold, 600);
-}
-
-.modal-ingredients ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: var(--vspace-0_75, 0.75rem);
-}
-
-.modal-ingredients li {
-  padding: var(--vspace-0_5, 0.5rem) var(--vspace-1, 1rem);
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 6px;
-  font-size: var(--text-sm, 0.875rem);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.2s ease;
-}
-
-.modal-ingredients li:hover {
-  background: rgba(219, 177, 124, 0.1);
-  border-color: rgba(219, 177, 124, 0.3);
-  transform: translateY(-2px);
-}
-
 /* Responsive: botón más grande en móvil para mejor usabilidad */
 @media (max-width: 768px) {
   .modal-close-btn {
@@ -157,10 +117,6 @@
 
   .modal-body {
     padding: var(--vspace-1_5, 1.5rem);
-  }
-
-  .modal-ingredients ul {
-    grid-template-columns: 1fr;
   }
 }
 
