@@ -1,75 +1,85 @@
-# 🍽️ Burdo Neiva - Restaurant Web App
+# Burdo Neiva — Restaurant SPA
 
-Modern web application for Burdo Neiva restaurant, built with React and optimized for performance and accessibility.
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![GSAP](https://img.shields.io/badge/GSAP-3.13-88CE02?style=flat-square&logo=greensock&logoColor=white)](https://gsap.com/)
+[![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white)](https://jestjs.io/)
+[![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white)](https://eslint.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=flat-square&logo=prettier&logoColor=black)](https://prettier.io/)
+[![Husky](https://img.shields.io/badge/Husky-1B6F75?style=flat-square)](https://typicode.github.io/husky/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com/)
 
-https://modern-restaurant-xi.vercel.app/
+Sitio web para el restaurante **Burdo Neiva**: SPA en React con animaciones GSAP, optimizada para rendimiento, accesibilidad y SEO.
 
-## 🚀 Features
+🌐 **Live:** [modern-restaurant-xi.vercel.app](https://modern-restaurant-xi.vercel.app/)
 
-- ✅ **Modern SPA** - React 19 with Create React App
-- ✅ **Responsive Design** - Adapted for mobile, tablet and desktop
-- ✅ **Performance Optimization** - Lazy loading, memoization, debounce
-- ✅ **Accessibility (A11y)** - Complete ARIA, keyboard navigation
-- ✅ **SEO Optimized** - Meta tags and JSON-LD schema
-- ✅ **Testing** - 37 automated tests with Jest and React Testing Library
-- ✅ **Code Quality** - ESLint + Prettier + Git Hooks
-- ✅ **Modular Architecture** - Reusable components and centralized data
+---
 
-## 📦 Technologies
+## Highlights
 
-- **React 19.2.0** - UI Library
-- **GSAP 3.13.0** - Animations
-- **Motion 12.23** - Modern animations
-- **Jest** - Testing framework
-- **React Testing Library** - Component testing
-- **ESLint + Prettier** - Linting and formatting
-- **Husky + lint-staged** - Git hooks
+- ⚡ **Performance**: lazy loading de componentes, `React.memo`, debounce en scroll, `loading="lazy"` en imágenes, fetch priority hints en hero.
+- ♿ **Accesibilidad**: ARIA completo en modal, focus trap, navegación por teclado (Escape, Tab, Enter), alt text en imágenes, roles semánticos.
+- 🔍 **SEO**: meta tags Open Graph + Twitter Cards, JSON-LD schema para restaurantes, canonical URLs.
+- 🧪 **Testing**: 37 tests automatizados (Jest + React Testing Library) sobre componentes y utilidades.
+- 🛡️ **Code quality**: ESLint + Prettier + git hooks con Husky/lint-staged que validan cada commit.
+- 🎨 **Animaciones**: GSAP 3.13 + Motion (Framer Motion) para transiciones suaves.
 
-## 🛠️ Installation
+## Stack
+
+| Categoría | Tecnología |
+|---|---|
+| UI | React 19.2 |
+| Animaciones | GSAP 3.13, Motion 12.23 |
+| Tests | Jest + React Testing Library |
+| Lint/Format | ESLint, Prettier |
+| Git hooks | Husky + lint-staged |
+| Build | Create React App 5 |
+| Hosting | Vercel |
+
+---
+
+## Quick start
 
 ```bash
-# Clone the repository
 git clone https://github.com/jbeleno/modern-restaurant.git
-
-# Install dependencies
+cd modern-restaurant
 npm install
-
-# Start development server
 npm start
+# → http://localhost:3000
 ```
 
-## 📜 Available Scripts
+## Scripts
 
-### Development
+### Desarrollo
 ```bash
-npm start              # Development server at http://localhost:3000
-npm run build          # Optimized production build
+npm start              # Dev server
+npm run build          # Build de producción
 ```
 
 ### Testing
 ```bash
-npm test               # Tests in watch mode
-npm run test:coverage  # Tests with coverage report
+npm test               # Watch mode
+npm run test:coverage  # Con coverage report
 ```
 
-### Code Quality
+### Calidad de código
 ```bash
-npm run lint           # Check errors with ESLint
-npm run lint:fix       # Fix errors automatically
-npm run format         # Format code with Prettier
-npm run format:check   # Check format without changes
+npm run lint           # ESLint check
+npm run lint:fix       # Auto-fix
+npm run format         # Prettier write
+npm run format:check   # Prettier check
 ```
 
-## 📁 Project Structure
+---
+
+## Estructura del proyecto
 
 ```
-burdo/
-├── public/                  # Static files
-│   └── assets/
-│       └── images/          # Site images
+modern-restaurant/
+├── public/
+│   └── assets/images/         # Imágenes del sitio
 ├── src/
-│   ├── components/          # React components
-│   │   ├── __tests__/       # Component tests
+│   ├── components/
+│   │   ├── __tests__/         # Component tests
 │   │   ├── About.js
 │   │   ├── Footer.js
 │   │   ├── Gallery.js
@@ -80,12 +90,12 @@ burdo/
 │   │   ├── Modal.js
 │   │   ├── Preloader.js
 │   │   └── SEO.js
-│   ├── data/                # Centralized data
-│   │   ├── galleryData.js   # Gallery data
-│   │   ├── menuData.js      # Restaurant menu
-│   │   ├── navigationData.js # Navigation links
-│   │   └── siteConfig.js    # Site configuration
-│   ├── hooks/               # Custom React Hooks
+│   ├── data/                  # Source of truth de contenido
+│   │   ├── menuData.js
+│   │   ├── galleryData.js
+│   │   ├── navigationData.js
+│   │   └── siteConfig.js
+│   ├── hooks/                 # Custom hooks
 │   │   ├── useActiveSection.js
 │   │   ├── useGalleryChromaEffect.js
 │   │   ├── useLightbox.js
@@ -94,159 +104,94 @@ burdo/
 │   │   ├── useScrollAnimation.js
 │   │   ├── useSmoothScroll.js
 │   │   └── useStickyHeader.js
-│   ├── styles/              # CSS styles
-│   │   └── variables.css    # CSS variables (design system)
-│   ├── utils/               # Utilities and helpers
-│   │   ├── __tests__/       # Utility tests
-│   │   ├── constants.js     # Project constants
-│   │   ├── formatters.js    # Format functions
-│   │   ├── helpers.js       # Helper functions
-│   │   ├── main.js          # jQuery scripts (third-party)
-│   │   └── plugins.js       # jQuery plugins (third-party)
-│   ├── App.js               # Main component
-│   ├── App.css              # App styles
-│   ├── index.js             # Entry point
-│   ├── styles.css           # Global styles
-│   └── vendor.css           # Third-party styles
-├── .eslintrc.json           # ESLint configuration
-├── .prettierrc              # Prettier configuration
-├── jest.config.js           # Jest configuration
-└── package.json             # Dependencies and scripts
+│   ├── styles/
+│   │   └── variables.css      # CSS variables (design system)
+│   ├── utils/
+│   │   ├── __tests__/
+│   │   ├── constants.js
+│   │   ├── formatters.js
+│   │   ├── helpers.js
+│   │   └── plugins.js
+│   ├── App.js
+│   ├── index.js
+│   └── styles.css
+├── .eslintrc.json
+├── .prettierrc
+├── .husky/pre-commit
+├── jest.config.js
+└── package.json
 ```
 
-## 🎨 Key Features
+## Configuración del contenido
 
-### Performance
-- **Lazy Loading** of components (About, Menu, Gallery, Footer)
-- **Memoization** with React.memo in MenuItem
-- **Debounce** in scroll events
-- **Lazy loading** of images with loading="lazy" attribute
-- **Priority hints** in hero images
+El sitio se actualiza editando los archivos en `src/data/`:
 
-### Accessibility
-- **Complete ARIA attributes** in modal
-- **Focus trap** in open modal
-- **Keyboard navigation** (Escape, Tab, Enter)
-- **Alt text** in all images
-- **Appropriate semantic roles**
+| Archivo | Qué controla |
+|---|---|
+| `siteConfig.js` | Nombre, dirección, teléfono, redes, horario |
+| `menuData.js` | Categorías, platos, precios, ingredientes |
+| `galleryData.js` | Fotos de la galería |
+| `navigationData.js` | Items del menú de navegación |
 
-### SEO
-- **Meta tags** Open Graph and Twitter Cards
-- **JSON-LD Schema** for restaurants
-- **Canonical URLs**
-- **Optimized titles and descriptions**
-
-### Testing
-- **37 automated tests** covering:
-  - Main components (Header, Menu, Modal, MenuItem)
-  - Utilities (formatters)
-  - User interactions
-  - Accessibility
-
-### Code Quality
-- **ESLint** with React and accessibility rules
-- **Prettier** for consistent formatting
-- **Git hooks** (pre-commit) that validate automatically
-- **0 linting errors** across the entire project
-
-## 🔧 Configuration
-
-### Environment Variables
-You can configure environment variables in a `.env` file:
+## Variables de entorno (opcional)
 
 ```env
 REACT_APP_SITE_NAME="Burdo Neiva"
 REACT_APP_API_URL="https://api.example.com"
 ```
 
-### Site Configuration
-Edit `src/data/siteConfig.js` to change:
-- Restaurant name
-- Address
-- Phone
-- Social networks
-- Schedule
+---
 
-### Menu
-Update `src/data/menuData.js` to modify:
-- Menu categories
-- Dishes and prices
-- Descriptions
-- Ingredients
+## Git hooks
 
-## 📝 Git Hooks
+`Husky` + `lint-staged` corren en cada commit:
 
-The project has **Husky** configured with **lint-staged** to automatically validate code before each commit:
-
-```bash
+```
 git commit
-# Automatically runs:
-# 1. ESLint --fix (fixes errors)
-# 2. Prettier --write (formats code)
-# 3. If there are errors → commit blocked ❌
-# 4. If everything OK → successful commit ✅
+└─ pre-commit:
+   ├─ eslint --fix
+   ├─ prettier --write
+   └─ Si falla → commit bloqueado
 ```
 
-## 🧪 Testing
+## Despliegue
 
-The project includes comprehensive tests:
-
-```bash
-# Run all tests
-npm test
-
-# Tests with coverage
-npm run test:coverage
-
-# Current coverage:
-- Components: 4 tested files
-- Utilities: 1 tested file
-- Total: 37 tests passing ✅
-```
-
-## 🚀 Deployment
-
-### Deploy to Vercel
+### Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/jbeleno/modern-restaurant)
 
-Or manually:
-
 ```bash
-# Install Vercel CLI
 npm i -g vercel
-
-# Deploy
 vercel
 ```
 
-### Build for Production
+### Build manual
 
 ```bash
 npm run build
-# Creates optimized build in /build folder
+# /build con assets optimizados
 ```
-
-## 🎯 Future Improvements
-
-- [ ] Implement backend with REST API
-- [ ] Online reservation system
-- [ ] Payment gateway integration
-- [ ] Admin panel
-- [ ] Online ordering system
-- [ ] Google Analytics integration
-
-## 📄 License
-
-This project is private and belongs to Burdo Neiva.
-
-## 👥 Team
-
-Developed with ❤️ for Burdo Neiva
 
 ---
 
-**Project Status**: ✅ Production Ready  
-**Version**: 0.1.0  
-**Tests**: 37/37 passing ✅  
-**Linting**: 0 errors ✅
+## Mejoras pendientes (deuda técnica reconocida)
+
+- **Migrar de CRA a Vite**: Create React App está [oficialmente deprecado desde 2025](https://github.com/facebook/create-react-app). Vite ofrece HMR ~10x más rápido y bundle más pequeño.
+- **Reservas online**: backend + flujo de booking con confirmación por email.
+- **Sistema de pedidos online** integrado con pasarela de pago (Wompi, Mercado Pago, Stripe).
+- **Panel admin** para que el dueño pueda actualizar menú/galería sin tocar código.
+- **Internacionalización**: español + inglés para turismo.
+- **Lighthouse CI**: medir Performance / Accessibility / SEO automáticamente en cada PR.
+- **Image optimization**: pasar a WebP/AVIF y servir con `<picture>` con fallback.
+
+---
+
+## Métricas actuales
+
+- 37/37 tests passing
+- 0 errores de ESLint
+- SPA con lazy loading y memoization
+
+## Licencia
+
+Software propietario para Burdo Neiva.
